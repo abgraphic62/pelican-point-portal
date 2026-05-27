@@ -32,6 +32,9 @@ export default function OwnersPage() {
     ]);
     console.log(data)
 console.log(error)
+if (error) {
+  alert(error.message)
+}
   
     setSubmitted(true)
   }
