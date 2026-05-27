@@ -20,7 +20,9 @@ export default function OwnersPage() {
         setError('Please enter your name and condo number.')
         return
       }
-
+      console.log(process.env.NEXT_PUBLIC_SUPABASE_URL)
+      console.log(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
+      console.log(supabase)
     const { data, error } = await supabase.from("away_notices").insert([
       {
         name: formData.name,
